@@ -87,6 +87,6 @@ unzip /lysee_update.zip
   # 用记事本打开 onup.file.txt：
     * 在文件开始处加入一行“subject Update lysee to version X.X.X.XXX”。
     * 在文件尾加入一行“unzip /lysee_update.zip”。
-  # 用 FTP 将两个文件上传到 *_http://www.lysee.net/onup/win32_*。 
+  # 用 FTP 将两个文件上传到 *_http://www.lysee.net/onup/win32/_* 目录下。 
 
 做完这些步骤后，安装 Lysee 的机器就可以上网升级了。
