@@ -52,7 +52,7 @@ CommandPrompt=Command:
   # 从升级目录 *_http://www.lysee.net/onup/win32/_* 下载控制文件 onup.file.txt。
   # 逐行执行 onup.file.txt 中的命令完成文件更新和设置。
 
-下面是 Lysee 0.1.1.320 升级控制文件的内容：
+Lysee 0.1.1.320 升级控制文件的内容是：
 
 {{{
 subject Update lysee to version 0.1.1.320
@@ -60,7 +60,7 @@ check /lysee_update.zip:E1C842A77CCD0D4BF8C05B81D14D1384
 unzip /lysee_update.zip
 }}}
 
-三条命令的作用是:
+里面有三条命令:
 
 || *命令* || *作用* ||
 || subject   || 在升级窗口显示新的任务描述 ||
