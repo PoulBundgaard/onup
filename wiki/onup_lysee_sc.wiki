@@ -1,0 +1,91 @@
+#如何用 ONUP 实现 Lysee 在线升级
+
+= 如何用 ONUP 实现 Lysee 在线升级 =
+
+== 升级程序 ==
+
+进入 Lysee 0.1.1.320 安装目录（c:\lysee）可以找到两个文件：onup.exe 和 onup.ini，onup.exe 是主升级程序，onup.ini 是配置文件，执行 onup.exe 即可对 Lysee 进行在线升级，首先，让我们看 onup.ini 的内容：
+
+{{{
+[ONUP]
+UpdateSource=http://www.lysee.net/onup/win32
+UpdatePath=.
+Language=English
+
+[English]
+Title=Lysee Updater
+Caption=Lysee Updater
+Subject=Update from http://www.lysee.net/onup/win32
+ProgressLabel=Progress:
+PercentLabel=Current:
+CurrentLabel=
+UpdateButton=&Update
+CancelButton=&Canvel
+FinishPrompt=Lysee has been updated!
+StopPrompt=Are you sure to stop updating progress?
+UnzipPrompt=Unzip:
+CommandPrompt=Command:
+}}}
+
+可以看到 onup.ini 文件由升级设置段 ONUP 和语言段 English 构成，具体参数的意义是：
+
+|| *段*    || *名称*        || *说明* ||
+|| ONUP    || UpdateSource  || 指向 Lysee 升级镜像的互联网地址 ||
+|| ONUP    || UpdatePath    || 指向 Lysee 的安装目录 ||
+|| ONUP    || Language      || 指向升级程序 onup.exe 所用界面语言的配置段 ||
+|| English || Title         || 升级程序在任务栏的标题 ||
+|| English || Caption       || 升级程序主窗口的标题 ||
+|| English || Subject       || 升级任务描述 ||
+|| English || ProgressLabel || 总体升级进度标签 ||
+|| English || PercentLabel  || 个体升级进度标签 ||
+|| English || CurrentLabel  || 当前升级个体的标签 ||
+|| English || UpdateButton  || *_升级_*按钮的标题 ||
+|| English || CancelButton  || *_取消_*按钮的标题 ||
+|| English || FinishPrompt  || 升级完成后的系统提示 ||
+|| English || StopPrompt    || 按*_取消_*按钮后系统弹出消息框询问是否终止升级进程 ||
+|| English || UnzipPrompt   || 解压缩提示 ||
+|| English || CommandPrompt || 执行命令行的提示 ||
+
+== 升级步骤 ==
+
+启动 onup.exe 后程序按以下步骤进行在线升级：
+
+# 从升级目录 *_http://www.lysee.net/onup/win32/_* 下载控制文件 onup.file.txt。
+# 逐行执行 onup.file.txt 中的命令完成升级。
+
+下面是 Lysee 0.1.1.320 升级控制文件的内容：
+
+{{{
+subject Update lysee to version 0.1.1.320
+check /lysee_update.zip:E1C842A77CCD0D4BF8C05B81D14D1384
+unzip /lysee_update.zip
+}}}
+
+顺序包含以下三条命令:
+
+|| *command* || *function* ||
+|| subject   || 在升级窗口显示新的任务描述 ||
+|| check     || 下载文件 /lysee_update.zip 到安装目录 ||
+|| unzip     || 释放 /lysee_update.zip 中的文件 ||
+
+== 制作升级镜像 ==
+
+http://www.lysee.net/onup/win32 是 Lysee Win32 版的升级目录，存储着以下两个文件:
+
+|| *文件*           || *说明* ||
+|| lysee_update.zip || 包含升级后文件的压缩包 ||
+|| onup.file.txt    || 升级控制文件 ||
+
+下面按步骤说明是如何生成这两个文件并准备好升级镜像：
+
+# 建立临时文件夹“d:\lysee_update”。
+# 将要更新的 Lysee 文件复制到此文件夹中。
+# 进入此文件夹，选择全部文件后压缩到文件 lysee_update.zip 中。
+# 删除 lysee_update.zip 以外的所有文件。
+# 执行命令行“onupmark.exe d:\lysee_update”生成 onup.file.txt。
+# 用记事本打开 onup.file.txt：
+  * 在文件开始处加入一行“subject Update lysee to version X.X.X.XXX”。
+  * 在文件尾加入一行“unzip /lysee_update.zip”。
+#、用 FTP 将两个文件上传到 http://www.lysee.net/onup/win32。 
+
+做完这些步骤后，安装 Lysee 的机器就可以上网升级了。
