@@ -100,4 +100,4 @@ unzip /lysee_update.zip
   # 将 onup.exe 和 onup.ini 与你的程序打包在一起发布安装。
   # 按第三部分*如何制作升级镜像*说明的步骤建立升级镜像。
 
-说明：命令不够用时可以修改 uni_update.pas 中的 TUpdateThread 类，增加自己的命令。
+另外：命令不够用时可以修改 uni_update.pas 中的 TUpdateThread 类，增加自己的命令。
