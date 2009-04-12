@@ -90,3 +90,14 @@ unzip /lysee_update.zip
   # 用 FTP 将两个文件上传到 *_http://www.lysee.net/onup/win32/_* 目录下。 
 
 做完这些步骤后，安装 Lysee 的机器就可以上网升级了。
+
+== 三、如何为自己的程序定制 ==
+
+在不改动程序的情况下大概是以下步骤：
+
+  # 为自己的程序设置一个更新目录，如: *_http://www.mysite.com/update/_*。
+  # 修改配置文件 onup.ini，将 UpdateSource 指向上面的地址。
+  # 将 onup.exe 和 onup.ini 与你的程序打包在一起发布安装。
+  # 按*_三、如何制作升级镜像_*说明的步骤建立升级镜像。
+
+说明：命令不够用时可以修改 uni_update.pas 中的 TUpdateThread 类，增加自己的命令。
