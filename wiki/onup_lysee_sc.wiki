@@ -1,3 +1,4 @@
+#labels Phase-Deploy,Phase-Support
 = 如何用 ONUP 实现 Lysee 在线升级 =
 
 == 升级程序 ==
@@ -37,10 +38,10 @@ CommandPrompt=Command:
 || English || ProgressLabel || 总体升级进度标签 ||
 || English || PercentLabel  || 个体升级进度标签 ||
 || English || CurrentLabel  || 当前升级个体的标签 ||
-|| English || UpdateButton  || *_升级_*按钮的标题 ||
-|| English || CancelButton  || *_取消_*按钮的标题 ||
+|| English || UpdateButton  || [*升级*]按钮的标题 ||
+|| English || CancelButton  || [*取消*]按钮的标题 ||
 || English || FinishPrompt  || 升级完成后的系统提示 ||
-|| English || StopPrompt    || 按*_取消_*按钮后系统弹出消息框询问是否终止升级进程 ||
+|| English || StopPrompt    || 按[*取消*]按钮后系统弹出消息框询问是否终止升级进程 ||
 || English || UnzipPrompt   || 解压缩提示 ||
 || English || CommandPrompt || 执行命令行的提示 ||
 
