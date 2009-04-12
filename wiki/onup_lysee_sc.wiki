@@ -49,8 +49,8 @@ CommandPrompt=Command:
 
 启动 onup.exe 后程序按以下步骤进行在线升级：
 
-# 从升级目录 *_http://www.lysee.net/onup/win32/_* 下载控制文件 onup.file.txt。
-# 逐行执行 onup.file.txt 中的命令完成升级。
+  # 从升级目录 *_http://www.lysee.net/onup/win32/_* 下载控制文件 onup.file.txt。
+  # 逐行执行 onup.file.txt 中的命令完成升级。
 
 下面是 Lysee 0.1.1.320 升级控制文件的内容：
 
@@ -69,7 +69,7 @@ unzip /lysee_update.zip
 
 == 制作升级镜像 ==
 
-http://www.lysee.net/onup/win32 是 Lysee Win32 版的升级目录，存储着以下两个文件:
+*_http://www.lysee.net/onup/win32_* 是 Lysee Win32 版的升级目录，存储着以下两个文件:
 
 || *文件*           || *说明* ||
 || lysee_update.zip || 包含升级后文件的压缩包 ||
@@ -85,6 +85,6 @@ http://www.lysee.net/onup/win32 是 Lysee Win32 版的升级目录，存储着�
 # 用记事本打开 onup.file.txt：
   * 在文件开始处加入一行“subject Update lysee to version X.X.X.XXX”。
   * 在文件尾加入一行“unzip /lysee_update.zip”。
-#、用 FTP 将两个文件上传到 http://www.lysee.net/onup/win32。 
+#、用 FTP 将两个文件上传到 *_http://www.lysee.net/onup/win32_*。 
 
 做完这些步骤后，安装 Lysee 的机器就可以上网升级了。
