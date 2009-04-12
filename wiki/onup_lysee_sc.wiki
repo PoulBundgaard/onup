@@ -1,6 +1,8 @@
 #labels Phase-Deploy,Phase-Support
 = 如何用 ONUP 实现 Lysee 在线升级 =
 
+下面以我开发的 Lysee 编程语言的在线升级为例说明如何配置使用 ONUP。
+
 == 一、升级程序构成 ==
 
 进入 Lysee 0.1.1.320 安装目录（c:\lysee）可以找到两个文件：升级程序 onup.exe 和配置文件 onup.ini，下面是 onup.ini 的内容：
