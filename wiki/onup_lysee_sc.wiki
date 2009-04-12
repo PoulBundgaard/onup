@@ -1,7 +1,7 @@
 #labels Phase-Deploy,Phase-Support
 = 如何用 ONUP 实现 Lysee 在线升级 =
 
-== 升级程序 ==
+== 一、升级程序 ==
 
 进入 Lysee 0.1.1.320 安装目录（c:\lysee）可以找到两个文件：onup.exe 和 onup.ini，onup.exe 是主升级程序，onup.ini 是配置文件，执行 onup.exe 即可对 Lysee 进行在线升级，首先，让我们看 onup.ini 的内容：
 
@@ -45,7 +45,7 @@ CommandPrompt=Command:
 || English || UnzipPrompt   || 解压缩提示 ||
 || English || CommandPrompt || 执行命令行的提示 ||
 
-== 升级步骤 ==
+== 二、升级步骤 ==
 
 启动 onup.exe 后程序按以下步骤进行在线升级：
 
@@ -67,7 +67,7 @@ unzip /lysee_update.zip
 || check     || 下载文件 /lysee_update.zip 到安装目录 ||
 || unzip     || 释放 /lysee_update.zip 中的文件 ||
 
-== 制作升级镜像 ==
+== 三、制作升级镜像 ==
 
 *_http://www.lysee.net/onup/win32_* 是 Lysee Win32 版的升级目录，存储着以下两个文件:
 
