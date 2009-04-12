@@ -62,7 +62,7 @@ unzip /lysee_update.zip
 
 顺序包含以下三条命令:
 
-|| *command* || *function* ||
+|| *命令* || *说明* ||
 || subject   || 在升级窗口显示新的任务描述 ||
 || check     || 下载文件 /lysee_update.zip 到安装目录 ||
 || unzip     || 释放 /lysee_update.zip 中的文件 ||
