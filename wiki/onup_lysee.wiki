@@ -31,21 +31,21 @@ configuration consists of two sections: *_ONUP_* for main configuration, *_Engli
 Here is the meaning of the configurations.
 
 || *section* || *variable* || *description* ||
-|| ONUP || UpdateSource || updating image address ||
-|| ONUP || UpdatePath || 指向 Lysee 的安装目录 ||
-|| ONUP || Language || 指向升级程序 onup.exe 所用界面语言的配置段 ||
-|| English || Title         || 升级程序在任务栏的标题 ||
-|| English || Caption       || 升级程序主窗口的标题 ||
-|| English || Subject       || 升级任务描述 ||
-|| English || ProgressLabel || 总体升级进度标签 ||
-|| English || PercentLabel  || 个体升级进度标签 ||
-|| English || CurrentLabel  || 当前升级个体的标签 ||
-|| English || UpdateButton  || [*升级*]按钮的标题 ||
-|| English || CancelButton  || [*取消*]按钮的标题 ||
-|| English || FinishPrompt  || 升级完成后的系统提示 ||
-|| English || StopPrompt    || 按[*取消*]按钮后系统弹出消息框询问是否终止升级进程 ||
-|| English || UnzipPrompt   || 解压缩提示 ||
-|| English || CommandPrompt || 执行命令行的提示 ||
+|| ONUP || UpdateSource || points to lysee's source image folder on internet ||
+|| ONUP || UpdatePath || points to lysee's installation folder ||
+|| ONUP || Language || language section used for UI of onup.exe ||
+|| English || Title || application title ||
+|| English || Caption || main form caption ||
+|| English || Subject || subject label caption ||
+|| English || ProgressLabel || progress label caption ||
+|| English || PercentLabel  || percent label caption ||
+|| English || CurrentLabel  || default prompt string ||
+|| English || UpdateButton  || update button caption ||
+|| English || CancelButton  || cancel button caption ||
+|| English || FinishPrompt  || message prompted when ONUP is complete ||
+|| English || StopPrompt    || message prompted when cancel button is clicked ||
+|| English || UnzipPrompt   || unzip prompt (a prefix) ||
+|| English || CommandPrompt || command prompt (a prefix) ||
 
 == 二、在线升级步骤 ==
 
