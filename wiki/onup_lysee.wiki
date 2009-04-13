@@ -1,4 +1,4 @@
-= Online update lysee with ONUP =
+= ONUP lysee with ONUP =
 
 下面以我开发的 *_[http://www.lysee.net/ Lysee]_* 编程语言的在线升级为例说明如何配置使用 ONUP。
 
