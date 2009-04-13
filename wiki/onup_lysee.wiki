@@ -31,7 +31,7 @@ configuration consists of two sections: *_ONUP_* for main configuration, *_Engli
 Here is the meaning of the configurations.
 
 || *section* || *variable* || *description* ||
-|| ONUP || UpdateSource || points to lysee's source image folder on internet ||
+|| ONUP || UpdateSource || points to lysee's source updating folder on internet ||
 || ONUP || UpdatePath || points to lysee's installation folder ||
 || ONUP || Language || language section used for UI of onup.exe ||
 || English || Title || application title ||
@@ -40,12 +40,12 @@ Here is the meaning of the configurations.
 || English || ProgressLabel || progress label caption ||
 || English || PercentLabel  || percent label caption ||
 || English || CurrentLabel  || default prompt string ||
-|| English || UpdateButton  || update button caption ||
-|| English || CancelButton  || cancel button caption ||
+|| English || UpdateButton  || *_update_* button caption ||
+|| English || CancelButton  || *_cancel_* button caption ||
 || English || FinishPrompt  || message prompted when ONUP is complete ||
-|| English || StopPrompt    || message prompted when cancel button is clicked ||
-|| English || UnzipPrompt   || unzip prompt (a prefix) ||
-|| English || CommandPrompt || command prompt (a prefix) ||
+|| English || StopPrompt    || message prompted when *_cancel_* button is clicked ||
+|| English || UnzipPrompt   || unzip prompt as a prefix ||
+|| English || CommandPrompt || command prompt as a prefix ||
 
 == 二、在线升级步骤 ==
 
