@@ -1,10 +1,10 @@
 = ONUP lysee with ONUP =
 
-This article will show you how to update *_[http://www.lysee.net/ lysee]_* with ONUP.
+This article shows you how to update *_[http://www.lysee.net/ lysee]_* with ONUP.
 
 == 1. *_onup_* files ==
 
-在 Lysee 0.1.1.320 安装目录 *_c:\lysee_* 可以找到升级程序 onup.exe 和配置文件 onup.ini，下面是 onup.ini 的内容：
+There are two files in the installation folder of Lysee 0.1.1.320, program _onup.exe_ and its configuration file _onup.ini_, _onup.ini_ is like this:
 
 {{{
 [ONUP]
