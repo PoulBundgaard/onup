@@ -27,7 +27,7 @@ UnzipPrompt=Unzip:
 CommandPrompt=Command:
 }}}
 
-*_onup.ini__* has two sections: ONUP for main configuration, English as UI language.
+*_onup.ini_* has two sections: *_ONUP_* for main configuration, *_English_* as UI language.
 
 || *段*    || *名称*        || *说明* ||
 || ONUP    || UpdateSource  || 指向 Lysee 升级镜像的互联网地址 ||
