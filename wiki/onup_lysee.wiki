@@ -1,6 +1,6 @@
 = ONUP lysee with ONUP =
 
-下面以我开发的 *_[http://www.lysee.net/ Lysee]_* 编程语言的在线升级为例说明如何配置使用 ONUP。
+This page will show you how to update [http://www.lysee.net/ lysee programing language] with ONUP.
 
 == 一、升级程序构成 ==
 
