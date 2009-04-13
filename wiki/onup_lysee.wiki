@@ -43,7 +43,7 @@ Here is the meaning of the configurations.
 || English || UpdateButton  || *_update_* button caption ||
 || English || CancelButton  || *_cancel_* button caption ||
 || English || FinishPrompt  || message prompted when ONUP is complete ||
-|| English || StopPrompt    || message prompted when *_cancel_* button is clicked ||
+|| English || StopPrompt    || confirm message prompted when *_cancel_* button is clicked ||
 || English || UnzipPrompt   || unzip prompt as a prefix ||
 || English || CommandPrompt || command prompt as a prefix ||
 
