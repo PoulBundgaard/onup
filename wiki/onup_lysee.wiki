@@ -1,6 +1,6 @@
 = ONUP lysee with ONUP =
 
-This page will show you how to update [http://www.lysee.net/ lysee programing language] with ONUP.
+This article will show you how to update *_[http://www.lysee.net/ lysee]_* with ONUP.
 
 == 一、升级程序构成 ==
 
