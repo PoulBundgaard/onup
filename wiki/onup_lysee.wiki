@@ -27,7 +27,7 @@ UnzipPrompt=Unzip:
 CommandPrompt=Command:
 }}}
 
-configuration consists of two sections: *_ONUP_* for main configuration, *_English_* as UI language.
+*_onup.ini_* consists of two sections: *_ONUP_* for main configuration, *_English_* as UI language.
 Here is the meaning of the configurations.
 
 || *section* || *variable* || *description* ||
