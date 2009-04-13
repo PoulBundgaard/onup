@@ -28,8 +28,9 @@ CommandPrompt=Command:
 }}}
 
 configuration consists of two sections: *_ONUP_* for main configuration, *_English_* as UI language.
+Here is the meaning of the configurations.
 
-|| *段*    || *名称*        || *说明* ||
+|| *section* || *variable* || *description* ||
 || ONUP    || UpdateSource  || 指向 Lysee 升级镜像的互联网地址 ||
 || ONUP    || UpdatePath    || 指向 Lysee 的安装目录 ||
 || ONUP    || Language      || 指向升级程序 onup.exe 所用界面语言的配置段 ||
