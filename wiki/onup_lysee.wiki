@@ -4,7 +4,7 @@ This article shows you how to update *_[http://www.lysee.net/ lysee]_* with ONUP
 
 == 1. *_onup_* files ==
 
-There are two files in the installation folder of Lysee 0.1.1.320, program *_onup.exe_* and its configuration file *_onup.ini_*:
+There are two files in the installation folder of Lysee 0.1.1.320, program *_onup.exe_* and its config file *_onup.ini_*:
 
 {{{
 [ONUP]
@@ -27,7 +27,7 @@ UnzipPrompt=Unzip:
 CommandPrompt=Command:
 }}}
 
-*_onup.ini_* has two sections: *_ONUP_* for main configuration, *_English_* as UI language.
+configuration consists of two sections: *_ONUP_* for main configuration, *_English_* as UI language.
 
 || *段*    || *名称*        || *说明* ||
 || ONUP    || UpdateSource  || 指向 Lysee 升级镜像的互联网地址 ||
