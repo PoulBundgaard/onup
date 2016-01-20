@@ -1,0 +1,106 @@
+# ONUP lysee with ONUP #
+
+This article shows you how to update **_[lysee](http://www.lysee.net/)_** with ONUP.
+
+## 1. **_onup_** files ##
+
+There are two files in the installation folder of Lysee 0.1.1.320, program **_onup.exe_** and its config file **_onup.ini_**:
+
+```
+[ONUP]
+UpdateSource=http://www.lysee.net/onup/win32
+UpdatePath=.
+Language=English
+
+[English]
+Title=Lysee Updater
+Caption=Lysee Updater
+Subject=Update from http://www.lysee.net/onup/win32
+ProgressLabel=Progress:
+PercentLabel=Current:
+CurrentLabel=
+UpdateButton=&Update
+CancelButton=&Canvel
+FinishPrompt=Lysee has been updated!
+StopPrompt=Are you sure to stop updating progress?
+UnzipPrompt=Unzip:
+CommandPrompt=Command:
+```
+
+**_onup.ini_** consists of two sections: **_ONUP_** for main configuration, **_English_** as UI language.
+Here is the meaning of the configurations.
+
+| **section** | **variable** | **description** |
+|:------------|:-------------|:----------------|
+| ONUP        | UpdateSource | points to lysee's source updating folder on internet |
+| ONUP        | UpdatePath   | points to lysee's installation folder |
+| ONUP        | Language     | language section used for UI of onup.exe |
+| English     | Title        | application title |
+| English     | Caption      | main form caption |
+| English     | Subject      | subject label caption |
+| English     | ProgressLabel | progress label caption |
+| English     | PercentLabel  | percent label caption |
+| English     | CurrentLabel  | default prompt string |
+| English     | UpdateButton  | **_update_** button caption |
+| English     | CancelButton  | **_cancel_** button caption |
+| English     | FinishPrompt  | message prompted when ONUP is complete |
+| English     | StopPrompt    | confirm message prompted when **_cancel_** button is clicked |
+| English     | UnzipPrompt   | unzip prompt as a prefix |
+| English     | CommandPrompt | command prompt as a prefix |
+
+## 二、在线升级步骤 ##
+
+程序 onup.exe 运行后按以下步骤进行在线升级：
+
+  1. 从升级目录 **_http://www.lysee.net/onup/win32/_** 下载控制文件 onup.file.txt。
+  1. 逐行执行 onup.file.txt 中的命令完成文件更新和设置。
+
+升级控制文件的内容是：
+
+```
+subject Update lysee to version 0.1.1.320
+check /lysee_update.zip:E1C842A77CCD0D4BF8C05B81D14D1384
+unzip /lysee_update.zip
+```
+
+里面有三条命令:
+
+| **命令** | **作用** |
+|:-------|:-------|
+| subject   | 在升级窗口显示任务描述: _Update lysee to version 0.1.1.320_ |
+| check     | 下载文件 /lysee\_update.zip 到安装目录 |
+| unzip     | 释放 /lysee\_update.zip 中的文件 |
+
+## 三、如何制作升级镜像 ##
+
+**_http://www.lysee.net/onup/win32/_** 下存储着以下两个文件:
+
+| **文件**           | **说明** |
+|:-----------------|:-------|
+| lysee\_update.zip | 包含升级后文件的压缩包 |
+| onup.file.txt    | 升级控制文件 |
+
+下面按步骤说明是如何生成这两个文件并准备好升级镜像：
+
+  1. 建立临时文件夹“d:\lysee\_update”。
+  1. 将要更新的 Lysee 文件复制到此文件夹中。
+  1. 进入此文件夹，选择全部文件后压缩到文件 lysee\_update.zip 中。
+  1. 删除 lysee\_update.zip 以外的所有文件。
+  1. 执行命令行“onupmark.exe d:\lysee\_update”生成 onup.file.txt。
+  1. 用记事本打开 onup.file.txt：
+    * 在文件开始处加入一行“subject Update lysee to version X.X.X.XXX”。
+    * 在文件尾加入一行“unzip /lysee\_update.zip”。
+  1. 用 FTP 将两个文件上传到 **_http://www.lysee.net/onup/win32/_** 目录下。
+
+做完这些步骤后，安装 Lysee 的机器就可以上网升级了。
+
+## 四、如何定制自己的升级程序 ##
+
+在不改动程序的情况下大概是以下步骤：
+
+  1. 为自己的程序设置一个更新目录，如: **_http://www.mysite.com/update/_**。
+  1. 修改配置文件 onup.ini，将 UpdateSource 指向上面的地址。
+  1. 将 onup.exe 和 onup.ini 与你的程序打包在一起发布安装。
+  1. 按第三部分\*如何制作升级镜像\*说明的步骤建立升级镜像。
+
+另外：命令不够用时可以修改 uni\_update.pas 中的 TUpdateThread 类，增加自己的命令。
